@@ -1,14 +1,16 @@
 package com.example.chatapp.Controller;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class Controller {
+@Controller
+public class ChatController {
 
-    @RequestMapping(value = "/", method= RequestMethod.GET)
-    public String index() {
-        return "Greetings from Spring Boot!";
+    @GetMapping("/")
+    public String chat() {
+        return "chat";
     }
 }
