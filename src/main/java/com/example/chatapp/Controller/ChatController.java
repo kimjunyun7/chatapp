@@ -18,7 +18,7 @@ public class ChatController {
     @GetMapping("/")
     public String rooms(Model model){
         model.addAttribute("rooms",chatRoomRepository.findAllRoom());
-        return "roomList";
+        return "rooms";
     }
 
     @GetMapping("/rooms/{id}")
@@ -41,4 +41,5 @@ public class ChatController {
 
         return "redirect:/";
     }
+
 }
